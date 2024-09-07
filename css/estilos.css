@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --colorPrimario: #000;
+    --colorElementos: #FE3D02;
+    --colorElemento: #E15B26;
+    --colorTitulo: #000;
+    --alineacionTitulo: left;
+    --paddingContenedor: 100px 0;
+    --anchoContenedor: 90%;
+    --maxAnchoContenedor: 1200px;
+    --colorBoton: #f0F;
+    --paddingBoton: 20px 35px;
+    --altoFondoCabecera: 210px;
+}
+
+body {
+    font-family: 'Besley', serif;
+    /*background-color: #fff;
+   opacity: 1;
+   background-image: radial-gradient(#b4481e 0.75px, transparent 0.75px), radial-gradient(#b4481e 0.75px, #FfefFf 0.75px);
+   background-size: 30px 30px;
+   background-position: 0 0, 15px 15px;*/
+}
+
+.Contenedor {
+    width: 90%;
+    max-width: var(--maxAnchoContenedor);
+    padding: var(--paddingContenedor);
+    margin: 0 auto;
+    overflow: hidden;
+    background: none;
+}
+
+
+/*--------------- Cabecera Principal ---------------*/
+
+.Cabecera {
+    height: 255px;
+    min-width: 500px;
+    position: relative;
+    --paddingContenedor: 0px;
+    border: 1px solid var(--colorElementos);
+}
+
+.Cabecera::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: var(--altoFondoCabecera);
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 1);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    z-index: -1;
+}
+
+.ContenedorCabecera {
+    display: grid;
+    height: 200px;
+    grid-template-columns: 1fr 4fr;
+    place-items: center;
+    gap: 20px;
+}
+
+.TituloPrincipal {
+    font-size: 2.5rem;
+    color: #FFF;
+    font-style: italic;
+}
+
+.ContenidwoPrincipal {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: var(--colorElementos);
+}
+
+.imagenCabecera {
+    width: 90%;
+}
+
+
+/*--------------- Menu de Navegacion ---------------*/
+
+.menu {
+    margin-top: 10px;
+    align-items: center;
+    align-content: center;
+}
+
+
+/*------------------------------------------------------ menu ------------------------------------------------------*/
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    align-content: unset;
+}
+
+
+/* items del menu */
+
+#menu ul li {
+    /*background-color: #DF5A28; /*#DF5A28 Color de fondo items principales*/
+    background-color: var(--colorElementos);
+}
+
+
+/* enlaces del menu */
+
+#menu ul a {
+    display: block;
+    color: #000;
+    /* Color de letra de los items*/
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 20px;
+    padding: 6.3px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border: 0.1px solid #f9f9f9;
+}
+
+
+/* items del menu */
+
+#menu ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    background-color: var(--colorElementos);
+    border-top: 0.5px solid #000;
+    border-bottom: 0.5px solid #000;
+    border-left: 0.5px solid #000;
+    border-right: 0.5px solid #000;
+}
+
+
+/* efecto al pasar el ratón por los items del menu */
+
+#menu ul li:hover {
+    background-color: #fff;
+}
+
+
+/* menu desplegable */
+
+#menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #eee;
+    padding: 0;
+}
+
+
+/* items del menu desplegable */
+
+#menu ul ul li {
+    float: none;
+    width: 200px;
+    text-align: center;
+}
+
+
+/* enlaces de los items del menu desplegable */
+
+#menu ul ul a {
+    line-height: 100%;
+    padding: 10px 15px;
+}
+
+
+/* items del menu desplegable al pasar el ratón */
+
+#menu ul li:hover>ul {
+    display: block;
+}
+
+
+/*-------------------------------------------------*/
+
+
+/*--------------- Seccion Principal ---------------*/
+
+.main {
+    /*margin: 10px;
+padding: 10px;*/
+    text-align: var(--alineacionTitulo);
+}
+
+.titulo {
+    font-size: 2.5rem;
+    color: var(--colorTitulo);
+    text-align: var(--alineacionTitulo);
+}
+
+.subtitulo {
+    font-size: 16px;
+    padding-bottom: 30px;
+    color: #0e0e0e;
+}
+
+.bordeTitulo::after {
+    content: "";
+    display: block;
+    width: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 4px;
+    background-color: var(--colorElementos);
+}
+
+.ContenedorContenido {
+    padding: 30px 0 30px;
+    place-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/*--------------- Pie de Pagina ---------------*/
+
+.piePagina {
+    position: relative;
+    --paddingContenedor: 160px 0 50x;
+}
+
+.piePagina::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+}
+
+.piePaginaContacto {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 20px;
+    place-items: center;
+    margin-bottom: 10px;
+    margin-top: 80px;
+}
+
+.piePaginaTexto {
+    text-align: left;
+    justify-self: left;
+}
+
+.piePaginaDetalle {
+    margin: 20px 0;
+    font-weight: 200px;
+}
+
+.social {
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.piePaginaEnlaces {
+    width: 50px;
+    height: 50px;
+    /*border: 1px solid #000;
+   border-radius: 50%;
+   margin-right: 20px;
+   margin-bottom: 20px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*/ .piePaginaImagen {
+    margin: 0;
+    text-align: right;
+    margin-left: 30px;
+}
+
+.piePaginaImagen img {
+    margin-left: 200px;
+}
+
+.iconoRedes {
+    width: 40px;
+}
+
+
+/*Formulario de contacto*/
+
+#formularioContacto .div {
+    width: 460px;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #961616;
+}
+
+#formularioContacto input {
+    background-color: #fbfbfb;
+    width: 408px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--colorElementos);
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+#formularioContacto input [type="submit"] {
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+#formularioContacto textarea {
+    background-color: #fbfbfb;
+    width: 405px;
+    height: 150px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--colorElementos);
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}

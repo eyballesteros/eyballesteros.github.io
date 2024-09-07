@@ -1,0 +1,100 @@
+:root {
+    --colorPrimario: #000;
+    --colorElementos: #FE3D02;
+    --colorElemento: #E15B26;
+    --colorTitulo: #000;
+    --alineacionTitulo: left;
+    --paddingContenedor: 100px 0;
+    --anchoContenedor: 90%;
+    --maxAnchoContenedor: 1200px;
+    --colorBoton: var(--colorElemento);
+    --paddingBoton: 20px 35px;
+    --altoFondoCabecera: 210px;
+}
+
+.formularioContacto input {
+    background-color: #fbfbfb;
+    width: 408px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--colorElementos);
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.formularioContacto input [type="submit"] {
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.formularioContacto textarea {
+    background-color: #fbfbfb;
+    width: 405px;
+    height: 150px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--colorElementos);
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+.formularioContacto label {
+    display: block;
+    float: center;
+}
+
+.formularioContacto button {
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: var(--colorElemento);
+    border-color: var(--colorElementos);
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer;
+}
+
+.formularioContacto button p {
+    color: #fff;
+}
+
+.formularioContacto span {
+    color: #f00;
+    /*Color asteriscos de requerido*/
+}
+
+.aviso {
+    font-size: 13px;
+    color: #0e0e0e;
+}
+
+ ::-webkit-input-placeholder {
+    color: #a8a8a8;
+}
+
+ ::-webkit-textarea-placeholder {
+    color: #a8a8a8;
+}
+
+.formulario input:focus {
+    outline: 0;
+    border: 1px solid #97d848;
+}
+
+.formulario textarea:focus {
+    outline: 0;
+    border: 1px solid #97d848;
+}
+
+
+/* creado por javiniguez.com, Julio 2019 */
