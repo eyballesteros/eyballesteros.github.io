@@ -101,7 +101,7 @@
             </ul>
           </li>
           <li>
-            <a href="">Acerca de</a>
+            <a href="">Acerca de PRUEBAS</a>
             <ul>
               <li><a href="">Submenu1</a></li>
               <li><a href="">Submenu2</a></li>
